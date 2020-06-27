@@ -13,6 +13,10 @@ import org.apache.poi.hwpf.extractor.WordExtractor;
 public class ReadDoc {
     public static void main(String[] args) {
         // TODO code application logic here
+        Properties prop = new Properties();
+        prop.setProperty("log4j.rootLogger", "WARN");
+        PropertyConfigurator.configure(prop);
+        
         File filenya = new File("F://readDoc.doc");
         WordExtractor extractor = null;
         try {
