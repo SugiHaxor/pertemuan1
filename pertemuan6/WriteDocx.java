@@ -21,6 +21,10 @@ public class WriteDocx {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
 
+        Properties prop = new Properties();
+        prop.setProperty("log4j.rootLogger", "WARN");
+        PropertyConfigurator.configure(prop);
+        
         String teks = "Write adalah kebalikan dari read."
                     + "Write secara bahasa berarti menulis."
                     + "Artinya menuliskan suatu teks."
