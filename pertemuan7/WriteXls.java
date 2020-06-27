@@ -19,6 +19,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  */
 public class WriteXls {
     public static void main(String[] args) throws FileNotFoundException, IOException {
+        Properties prop = new Properties();
+        prop.setProperty("log4j.rootLogger", "WARN");
+        PropertyConfigurator.configure(prop);
+        
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Java Books");
         
