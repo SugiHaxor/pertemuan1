@@ -29,6 +29,10 @@ public class ReadDocx {
 
     public static void main(String[] args) throws FileNotFoundException, IOException, ParserConfigurationException, SAXException {
 
+        Properties prop = new Properties();
+        prop.setProperty("log4j.rootLogger", "WARN");
+        PropertyConfigurator.configure(prop);
+        
         File filenya = new File("F://readDocx.docx");
         FileInputStream file = new FileInputStream(filenya.getPath());
 
