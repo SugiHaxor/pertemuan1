@@ -26,6 +26,10 @@ public class ReadXls {
     }
 
     public static void readFromXls(String urlexcel) throws FileNotFoundException, IOException {
+        Properties prop = new Properties();
+        prop.setProperty("log4j.rootLogger", "WARN");
+        PropertyConfigurator.configure(prop);
+        
         HSSFWorkbook myexcel = new HSSFWorkbook(new FileInputStream(urlexcel));
         HSSFSheet myexcelSheet = myexcel.getSheet("training");
         FormulaEvaluator formulaEv = myexcel.getCreationHelper().createFormulaEvaluator();
